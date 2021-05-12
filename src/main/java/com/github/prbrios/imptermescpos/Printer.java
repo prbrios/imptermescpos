@@ -41,6 +41,11 @@ public class Printer implements IPrinter {
 				this.buffer.write(32);
 				this.buffer.write(0);
 				
+				this.buffer.write(29);
+				this.buffer.write(249);
+				this.buffer.write(55);
+				this.buffer.write(8);
+				
 				this.command = new EscBema();
 				break;
 			case Epson:
@@ -143,7 +148,7 @@ public class Printer implements IPrinter {
 	public void testPrinter() {
 		
 		this.alignLeft();
-        this.writeLine("TESTE DE IMPRESSÃO NORMAL - 48 COLUNAS");
+        this.writeLine("TESTE DE IMPRESS\u00e3O NORMAL - 48 COLUNAS");
         this.writeLine("....+....1....+....2....+....3....+....4....+...");
         
         this.separator();
