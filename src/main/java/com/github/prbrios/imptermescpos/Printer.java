@@ -46,6 +46,11 @@ public class Printer implements IPrinter {
 				this.buffer.write(55);
 				this.buffer.write(8);
 				
+				this.buffer.write(29);
+				this.buffer.write(249);
+				this.buffer.write(45);
+				this.buffer.write(1);
+				
 				this.command = new EscBema();
 				break;
 			case Epson:
